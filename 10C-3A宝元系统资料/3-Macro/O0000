@@ -1,0 +1,14 @@
+/*LAYSER MEA. MOVEMENT*/
+G65 P9951 A2 E2 K25 Q20.000 R0.000 T1 U1;
+M30;
+;/*----  argument description   ----*/
+;/*A(#1)=1  X-axis active           */
+;/*      2  Y-axis active           */
+;/*      3  Z-axis active           */
+;/*E(#5)    Length of OverRun       */
+;/*K(#11)   No of segment           */
+;/*Q(#17)   Unists of Vector        */
+;/*R(#18)   Begining point(machine) */
+;/*T(#20)   Dwell time of each point*/
+;/*U(#21)   1)On key 0)ON_move      */
+;/***  YI-WAN LIN  2001/11/05 v2.0  */

@@ -1,0 +1,81 @@
+/*
+ parameter of maker:include filed and hint
+ filed:
+  (14500+no) = "string contexts"
+  14500: base field no. of parameter of maker
+  no: D register number,range 0~249
+
+  "string contexts": It can't have more than 16 letter in quotes.
+                     Quotes can't be ignored.
+
+ hint:
+  (14750+no) = "string contexts"
+  14750: base hint no. of parameter of maker
+  no: D register number,range 0~249
+
+  "string contexts": It can't have more than 30 letter in quotes.
+                     Quotes can't be ignored.
+
+ ps: 1. It is only use 
+        page of user parameter:
+        D51          D61
+        D52          D62
+        .            .
+        .            .
+        .            .
+        D60          D70
+
+ Example:
+   in first filed(D51), Filed displays "01.Prg Prtct", Hint displays "0:Editable 1:Protect"
+   14551 = "01.Prg Prtct"
+
+   14801 = "0:Editable 1:Protect"
+*/
+
+// After this line, you can write string of parameter of maker
+
+// end
+
+/* default string of parameter of maker
+14551 = "01.Prg Prtct"
+14552 = "02.ZRN Rqure"
+14553 = "03.HOME 1st"
+14554 = "04.Rpd 50%"
+14555 = "05.Tool No"
+14556 = "06.Dr Intrlck"
+14557 = "07.Lub. Mthd"
+14558 = "08.Lub. ON"
+14559 = "09.Lub. OFF"
+14560 = "10.POWER OFF"
+14561 = "11.DELAY OFF"
+14562 = "12.CNT ALARM"
+14563 = "13.N/A"
+14564 = "14.N/A"
+14565 = "15.N/A"
+14566 = "16.N/A"
+14567 = "17.N/A"
+14568 = "18.N/A"
+14569 = "19.N/A"
+14570 = "20.N/A"
+
+14801 = "0:Editable 1:Protect"
+14802 = "0:NO 1:YES"
+14803 = "0:BOTH 1:Z"
+14804 = "0:NO 1:YES"
+14805 = "Turrent Tool No.(0~50)"
+14806 = "0:NO 1:YES"
+14807 = "0:Auto 1:Manual"
+14808 = "Lub. ON Timer(0~32767 secs)"
+14809 = "Lub. OFF Timer(0~32767 MINS)"
+14810 = "0:NO 1:EXECUTE"
+14811 = "POWER OFF DELAY(0~32767 SECS)"
+14812 = "0:NO 1:EXECUTE"
+14813 = ""
+14814 = ""
+14815 = ""
+14816 = ""
+14817 = ""
+14818 = ""
+14819 = ""
+14820 = ""
+*/

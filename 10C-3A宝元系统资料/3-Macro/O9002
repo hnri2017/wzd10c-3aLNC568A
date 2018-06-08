@@ -1,0 +1,65 @@
+/* M91 PUT THE TOOL TO MAGAZIN PROGRAM O9002 */
+/* PLEASE SURE MAGAZINE INDEX NUMBER  */
+        #30=$3;                                 /* RECORD GROUP 3 VALUE */
+        #20=FIX(#20);                           /* T COMMAND MUST INTEGER */
+        IF ((#20>$32 )||(#20 < 0 )) GOTO 9090;  /* T COMMAND ERROR */
+        IF ((#20==#0 )||(#20 ==0 )) GOTO 9090;  /* T COMMAND ERROR */
+        IF (#20==$31) GOTO 8000;                /* Txx=Sn */
+        IF ($31==0) GOTO 100;                   /* M91T1 M2S0 */
+        IF ($31==$41) GOTO 50;                  /* M91T1 M2S2 */
+        $301=32;
+        T$31;                                   /* M91T1 M2S3 */
+        $301=0;
+N50     $301=3;
+        G91G30P2Z0M19;
+        $301=0;
+        G4X0.5;
+        $301=4;
+        M40;
+        $301=0;
+        G4X0.5;
+        $301=8;
+        M11;
+        $301=0;
+        G4X1.;
+        $301=16;
+        G53Z0.;
+        $301=0;
+        $301=128;
+        M10;
+        $301=0;
+        $301=64;
+        M41;
+        $301=0;
+N100    $301=32;
+        T#20;
+        $301=0;
+        $301=3;
+        G91G30P2Z0M19;;USE TOOL CLAMP/UNCLAMP
+        $301=0;
+        M0;          ;;PUSH BUTTON PUT THE TOOL TO MAGAZIN
+        $301=4;
+        M40;
+        $301=0;
+        G4X0.5;
+        $301=8;
+        M11;
+        $301=0;
+        G4X1.;
+        $301=16;
+        G53Z0;
+        $301=0;
+        $301=128;
+        M10;
+        $301=0;
+        $301=64;
+        M41;
+        $301=0;
+        GOTO 8000;
+N9090   $599=90;
+N8000   G#30;                                   /* WRITE GROUP 3 VALUE */
+        M99;
+/* KAO YUNG-MING 1998.0901  ver:3 */ 
+/* 128   64   32   16    8    4    2    1           */
+/* M10   M41       G53   M11  M40  M19  G30    R39  */
+/* M10   M41  TF   G53   M11  M40  M19  G30    $301 */

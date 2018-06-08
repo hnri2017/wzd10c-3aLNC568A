@@ -1,0 +1,250 @@
+/*
+ Parameter of maker1(Dreg):include Filed and Hint
+ Filed:
+  (14500+no) = "string contexts"
+  14500: base field no. of Parameter of maker1(Dreg)
+  no: D register number, range 0~249
+
+  "string contexts": It can't have more than 30 letter in quotes.
+                     Quotes can't be ignored.
+
+ Hint:
+  (14750+no) = "string contexts"
+  14750: base hint no. of Parameter of maker1(Dreg)
+  no: D register number, range 0~249
+
+  "string contexts": It can't have more than 30 letter in quotes.
+                     Quotes can't be ignored.
+
+ P.S: 1. It is only use 
+         page of user Parameter of maker1(Dreg):
+         D51          D61
+         D52          D62
+         .            .
+         .            .
+         .            .
+         D60          D70
+
+ Example:
+   In first filed(D51), Filed displays "01.Prg Prtct", 
+                        Hint displays "0:Editable 1:Protect"
+
+   14551 = "01.Prg Prtct"
+
+   14801 = "0:Editable 1:Protect"
+*/
+
+// After this line, you can write string of Parameter of maker1(Dreg)
+
+// end
+
+/* default string of Parameter of maker1(Dreg)
+14551 = "Prg Prtct"
+14552 = "ZRN RQURE"
+14553 = "HOME 1ST"
+14554 = "RPD 50%"
+14555 = "TOOL NO"
+14556 = "DR INTRLCK"
+14557 = "LUB. MTHD"
+14558 = "LUB. ON"
+14559 = "LUB. OFF"
+14560 = "POWER OFF"
+14561 = "DELAY OFF"
+14562 = "CNT ALARM"
+14563 = "N/A"
+14564 = "N/A"
+14565 = "N/A"
+14566 = "N/A"
+14567 = "N/A"
+14568 = "N/A"
+14569 = "N/A"
+14570 = "N/A"
+14581 = "N/A"
+14582 = "N/A"
+14583 = "N/A"
+14584 = "N/A"
+14585 = "N/A"
+14586 = "N/A"
+14587 = "N/A"
+14588 = "N/A"
+14589 = "N/A"
+14590 = "N/A"
+14591 = "N/A"
+14592 = "N/A"
+14593 = "N/A"
+14594 = "N/A"
+14595 = "N/A"
+14596 = "N/A"
+14597 = "N/A"
+14598 = "N/A"
+14599 = "N/A"
+14600 = "N/A"
+
+14801 = "0:EDITABLE 1:PROTECT"
+14802 = "0:NO 1:YES"
+14803 = "0:BOTH 1:Z"
+14804 = "0:NO 1:YES"
+14805 = "TURRENT TOOL NO.(0~50)"
+14806 = "0:NO 1:YES"
+14807 = "0:AUTO 1:MANUAL"
+14808 = "LUB. ON TIMER(0~32767 SECS)"
+14809 = "LUB. OFF TIMER(0~32767 MINS)"
+14810 = "0:NO 1:EXECUTE"
+14811 = "POWER OFF DELAY(0~32767 SECS)"
+14812 = "0:NO 1:EXECUTE"
+14813 = ""
+14814 = ""
+14815 = ""
+14816 = ""
+14817 = ""
+14818 = ""
+14819 = ""
+14820 = ""
+14831 = ""
+14832 = ""
+14833 = ""
+14834 = ""
+14835 = ""
+14836 = ""
+14837 = ""
+14838 = ""
+14839 = ""
+14840 = ""
+14841 = ""
+14842 = ""
+14843 = ""
+14844 = ""
+14845 = ""
+14846 = ""
+14847 = ""
+14848 = ""
+14849 = ""
+14850 = ""
+*/
+
+/*
+ Parameter of maker2(Rreg):include Filed and Hint
+ Filed:
+  (19501+no) = "string contexts"
+  19501: base field no. of Parameter of maker2(Rreg)
+  no: Sequence NO., range 0~39, through system parameter P1843~P1882
+      set value to decide display R register.
+
+  "string contexts": It can't have more than 30 letter in quotes.
+                     Quotes can't be ignored.
+
+ Hint:
+  (19701+no) = "string contexts"
+  19701: base hint no. of Parameter of maker2(Rreg)
+  no: Sequence NO., range 0~39, through system Parameter P1843~P1882
+      set value to decide display R register.
+
+  "string contexts": It can't have more than 30 letter in quotes.
+                     Quotes can't be ignored.
+
+ P.S: 1. It is only use
+         page of user Parameter of maker2(Rreg):
+         01           P1843 set value
+         02           P1844 set value
+         .            .
+         .            .
+         .            .
+         40           P1882 set value
+
+ Example:
+   In first filed(01), Filed displays "MPG Rate",
+                       Hint displays "0:x1 1:x10 2:x100",
+                       P1843 set value is 14
+
+   19501 = "MPG Rate"
+
+   19701 = "0:x1 1:x10 2:x100"
+*/
+
+// After this line, you can write string of Parameter of maker2(Rreg)
+
+// end
+
+/* default string of Parameter of maker2(Rreg)
+19501 = "N/A"
+19502 = "N/A"
+19503 = "N/A"
+19504 = "N/A"
+19505 = "N/A"
+19506 = "N/A"
+19507 = "N/A"
+19508 = "N/A"
+19509 = "N/A"
+19510 = "N/A"
+19511 = "N/A"
+19512 = "N/A"
+19513 = "N/A"
+19514 = "N/A"
+19515 = "N/A"
+19516 = "N/A"
+19517 = "N/A"
+19518 = "N/A"
+19519 = "N/A"
+19520 = "N/A"
+19521 = "N/A"
+19522 = "N/A"
+19523 = "N/A"
+19524 = "N/A"
+19525 = "N/A"
+19526 = "N/A"
+19527 = "N/A"
+19528 = "N/A"
+19529 = "N/A"
+19530 = "N/A"
+19531 = "N/A"
+19532 = "N/A"
+19533 = "N/A"
+19534 = "N/A"
+19535 = "N/A"
+19536 = "N/A"
+19537 = "N/A"
+19538 = "N/A"
+19539 = "N/A"
+19540 = "N/A"
+
+19701 = ""
+19702 = ""
+19703 = ""
+19704 = ""
+19705 = ""
+19706 = ""
+19707 = ""
+19708 = ""
+19709 = ""
+19710 = ""
+19711 = ""
+19712 = ""
+19713 = ""
+19714 = ""
+19715 = ""
+19716 = ""
+19717 = ""
+19718 = ""
+19719 = ""
+19720 = ""
+19721 = ""
+19722 = ""
+19723 = ""
+19724 = ""
+19725 = ""
+19726 = ""
+19727 = ""
+19728 = ""
+19729 = ""
+19730 = ""
+19731 = ""
+19732 = ""
+19733 = ""
+19734 = ""
+19735 = ""
+19736 = ""
+19737 = ""
+19738 = ""
+19739 = ""
+19740 = ""
+*/

@@ -1,0 +1,91 @@
+@echo off
+
+IF EXIST C:\SetRoot.bat  call C:\SetRoot.bat
+SET RootOrg=%ROOT%
+
+SET INSTSOURCEDIR=.
+SET D1EXIST=
+
+SET MAKER=POU YUEN TECH CORP.
+SET PRODUCTNAME=LNC-M568A
+SET VER=V2.00
+SET ISSUEDAT=05/07/2001
+SET EXESFX=SETUP.EXE
+SET ROOT=PROGRAM
+SET ROOTB2=PROGRAM.B2
+SET EXENAME=MAIN.EXE
+
+if NOT "%1"=="" SET INSTSOURCEDIR=%1
+
+%INSTSOURCEDIR%\ISDSK.EXE C:\
+IF ERRORLEVEL 2 goto D1L2
+IF ERRORLEVEL 1 goto D1L1
+GOTO D1L2
+
+:D1L1
+SET D1EXIST=YES
+goto D1L2
+
+:D1L2
+
+if not "%D1EXIST%"=="YES"  goto D1notFound
+
+if exist c:\command.com goto command_found
+echo.
+echo File not found[c:\command.com] !!
+echo Please install O.S UTILITY again
+echo Then install %PRODUCTNAME% software
+echo.
+pause
+goto BYE
+
+:command_found
+if NOT EXIST %INSTSOURCEDIR%\G.bat        goto NOT_FOUND_DIR
+if NOT EXIST %INSTSOURCEDIR%\Inst.BAT     goto NOT_FOUND_DIR
+if NOT EXIST %INSTSOURCEDIR%\INSTVER.BAT  goto NOT_FOUND_DIR
+if NOT EXIST %INSTSOURCEDIR%\SetRoot.BAT  goto NOT_FOUND_DIR
+if NOT EXIST %INSTSOURCEDIR%\ISDSK.exe    goto NOT_FOUND_DIR
+if NOT EXIST %INSTSOURCEDIR%\DISKFREE.exe goto NOT_FOUND_DIR
+
+CLS
+%INSTSOURCEDIR%\DISKFREE.exe C 2000000
+if errorlevel 5 goto D1_ENOUGH
+pause
+goto BYE
+:D1_ENOUGH
+
+copy /y %INSTSOURCEDIR%\Inst.BAT     C:\Tmp.bat      >NUL
+copy /y %INSTSOURCEDIR%\SetRoot.BAT  C:\SetRoot.BAT  >NUL
+
+c:\command.com /e:4096 /C  call C:\Tmp.bat %INSTSOURCEDIR% %2
+
+goto BYE
+
+:NOT_FOUND_DIR
+ ECHO.
+ ECHO %INSTSOURCEDIR% : Installing file not exist !!
+goto BYE
+
+:D1notFound
+cls
+echo.
+echo Disk [C] not found !!
+echo.
+goto BYE
+
+:BYE
+SET INSTSOURCEDIR=
+SET D1EXIST=
+
+SET MAKER=
+SET PRODUCTNAME=
+SET VER=
+SET ISSUEDAT=
+SET EXESFX=
+SET ROOT=
+SET ROOTB2=
+SET EXENAME=
+SET RootOrg=
+
+if "%D1EXIST%"=="YES"  C:
+if "%D1EXIST%"=="YES"  CD\
